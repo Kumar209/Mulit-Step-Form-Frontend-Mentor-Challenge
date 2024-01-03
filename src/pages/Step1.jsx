@@ -14,7 +14,7 @@ function Step1() {
   } = useForm();
 
   const onSubmit = (data) => {
-    alert("Form submitted");
+    // alert("Form submitted");
 
     navigate("/select-plan");
   };

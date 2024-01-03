@@ -8,7 +8,7 @@ function Sidebar({ display, active }) {
     <div
       className={`${
         display === "Desktop"
-          ? "bg-DesktopImg1 hidden md:block w-[28%] bg-no-repeat rounded-xl pt-2"
+          ? "bg-DesktopImg1 hidden md:block w-[28%] bg-no-repeat rounded-xl pt-2 md:mt-[9px]"
           : "bg-MobileImg1 bg-no-repeat bg-cover md:hidden flex flex-row justify-center text-center w-[100vw] h-[25vh]  pt-3 md:mb-[50px]"
       }`}
     >
