@@ -28,7 +28,7 @@ function Step1() {
         <Sidebar display={"Desktop"} active={active} />
 
         <div className="flex flex-col w-full md:w-[70%] h-full pl-2 md:pl-[10%]">
-          <div className="mt-3 md:mt-5">
+          <div className="mt-3 md:mt-9">
             <h1 className="font-Ubuntu font-extrabold text-2xl lg:text-3xl mb-2">
               Personal info
             </h1>

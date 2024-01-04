@@ -10,27 +10,34 @@ function Step2() {
   const navigate = useNavigate();
   const [active, setActive] = useState(2);
   const [year, setYear] = useState(false);
-  const [selected, setSelected] = useState("0");
+  const [selected, setSelected] = useState("5");
   const [selectedOne, setSelectedOne] = useState(true);
 
   const PlanSelection = [
+    //Agar yearly hoga toh total ko 10 se multiply kar dena
     {
+      id: "0",
       Plan: "Arcade",
       Monthprice: "9",
       Yearprice: "90",
       YearorMonth: year,
+      total: 9,
     },
     {
+      id: "1",
       Plan: "Advanced",
       Monthprice: "12",
       Yearprice: "120",
       YearorMonth: year,
+      total: 12,
     },
     {
+      id:"2",
       Plan: "Pro",
       Monthprice: "15",
       Yearprice: "150",
       YearorMonth: year,
+      total: 15,
     },
   ];
 
@@ -40,7 +47,6 @@ function Step2() {
   };
 
   const handleSubmit = () => {
-    alert(PlanSelection[selected].Plan);
 
     navigate("/add-ons");
   };
@@ -52,7 +58,7 @@ function Step2() {
         <Sidebar display={"Desktop"} active={active} />
 
         <div className="flex flex-col w-full md:w-[70%] lg:w-[65%] h-full pl-2 md:pl-[10%]">
-          <div className="mt-3 md:mt-5">
+          <div className="mt-3 md:mt-9">
             <h1 className="font-Ubuntu font-extrabold text-2xl lg:text-3xl mb-2">
               Select your plan
             </h1>
@@ -100,6 +106,7 @@ function Step2() {
                   )}
                 </div>
               </div>
+
 
               {/* Block 2 */}
               <div
@@ -164,6 +171,8 @@ function Step2() {
                   )}
                 </div>
               </div>
+
+
             </div>
 
             <div
@@ -219,6 +228,7 @@ function Step2() {
         </div>
       </div>
 
+      {/* For Mobile Mode */}
       <div className="w-full bg-white h-[10vh] flex justify-between pt-3 pr-6 md:hidden absolute bottom-0">
         <Link
           to="/"

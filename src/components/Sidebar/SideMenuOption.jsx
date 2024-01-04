@@ -16,8 +16,8 @@ function SideMenuOption({ step, Content, active }) {
           {step}
         </span>
         <div className="hidden md:block">
-          <p className="font-bold text-[13px] text-PastelBlue">STEP {step}</p>
-          <h1 className="text-white text-[16px] font-bold">{Content}</h1>
+          <p className="font-bold text-[11px] lg:text-[13px] text-PastelBlue">STEP {step}</p>
+          <h1 className="text-white text-[14px] lg:text-[16px] font-bold">{Content}</h1>
         </div>
       </div>
     </>
