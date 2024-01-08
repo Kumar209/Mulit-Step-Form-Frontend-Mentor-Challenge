@@ -77,7 +77,7 @@ const Step4 = () => {
             <div className="font-Ubuntu rounded-md bg-MagnoliaNeutral flex flex-col gap-4 pb-3 pt-3 px-5">
               <div className="flex flex-row justify-between items-center">
                 <div className="flex flex-col gap-[2px]">
-                  <h3 className="font-medium text-[16px]">{PlanData.plan.Plan} {year ?"(Yearly)}" : "(Monthly)"}</h3>
+                  <h3 className="font-medium text-[16px]">{PlanData.plan.Plan} {year ?"(Yearly)" : "(Monthly)"}</h3>
                   <Link
                     to={"/select-plan"}
                     className="font-light text-[14px] underline text-CoolGray hover:text-PurplishBlue"

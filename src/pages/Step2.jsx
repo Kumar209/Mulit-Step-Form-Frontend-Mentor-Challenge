@@ -44,7 +44,7 @@ function Step2() {
       id:"2",
       Plan: "Pro",
       Monthprice: 15,
-      Yearprice: 1150,
+      Yearprice: 150,
       YearorMonth: year,
     },
   ];

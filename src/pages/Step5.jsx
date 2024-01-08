@@ -10,7 +10,7 @@ const Step4 = () => {
   const navigate = useNavigate();
 
   window.addEventListener('popstate', function(event) {
-    navigate("/Multi-Step-Form-Frontend-Mentor-Challenge");
+    navigate("https://kumar209.github.io/Multi-Step-Form-Frontend-Mentor-Challenge/");
   });
 
   return (
