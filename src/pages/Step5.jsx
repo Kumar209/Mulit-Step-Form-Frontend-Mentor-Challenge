@@ -3,9 +3,15 @@
 import React, { useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Img from "../assets/images/icon-thank-you.svg";
+import { useNavigate } from "react-router-dom";
 
 const Step4 = () => {
   const [active, setActive] = useState(4);
+  const navigate = useNavigate();
+
+  window.addEventListener('popstate', function(event) {
+    navigate("/");
+  });
 
   return (
     <div className="w-full h-[100vh]  bg-MagnoliaNeutral overflow-x-hidden flex flex-col md:justify-center items-center relative md:static">

@@ -4,34 +4,47 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { Link, useNavigate } from "react-router-dom";
 import checkMark from "../assets/images/icon-checkmark.svg";
+import { useDispatch, useSelector } from "react-redux";
+import { UserAddOns } from "../Slices/Step3Slice";
 
 const Step3 = () => {
+  const data = useSelector(state => state.PlanCounter);
+
   const navigate = useNavigate();
-  const [year, setYear] = useState(false);
+
+  window.addEventListener('popstate', function(event) {
+    navigate("/");
+  });
+
+  
+  const year = data.plan.YearorMonth;
   const [active, setActive] = useState(3);
 
   const [add1, setAdd1] = useState(false);
   const [add2, setAdd2] = useState(false);
   const [add3, setAdd3] = useState(false);
 
+
+  const dispatch = useDispatch();
+
   const AddOns = [
     {
       name: "Online service",
       detail: "Access to multiplayer games",
-      MonthlyPrice: "1",
-      YearlyPrice: "10",
+      MonthlyPrice: 1,
+      YearlyPrice: 10,
     },
     {
       name: "Larger storage",
       detail: "Extra 1TB of cloud save",
-      MonthlyPrice: "2",
-      YearlyPrice: "20",
+      MonthlyPrice: 2,
+      YearlyPrice: 20,
     },
     {
       name: "Customizable Profile",
       detail: "Custom theme on your profile",
-      MonthlyPrice: "2",
-      YearlyPrice: "20",
+      MonthlyPrice: 2,
+      YearlyPrice: 20,
     },
   ];
 
@@ -47,7 +60,7 @@ const Step3 = () => {
       addOns.push(AddOns[2]);
     }
 
-    //Yahan pe total calculate karna pade ga
+    dispatch(UserAddOns(addOns));
 
     navigate("/summary");
   };

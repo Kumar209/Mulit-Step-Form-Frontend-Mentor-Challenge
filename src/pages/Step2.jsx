@@ -6,38 +6,46 @@ import arcadeImg from "../assets/images/icon-arcade.svg";
 import advancedImg from "../assets/images/icon-advanced.svg";
 import proImg from "../assets/images/icon-pro.svg";
 
+import { useDispatch } from "react-redux";
+import { UserPlan } from "../Slices/Step2Slice";
+
 function Step2() {
   const navigate = useNavigate();
+
+  window.addEventListener('popstate', function(event) {
+    navigate("/");
+  });
+
+  
   const [active, setActive] = useState(2);
   const [year, setYear] = useState(false);
-  const [selected, setSelected] = useState("5");
+  const [selected, setSelected] = useState("0");
   const [selectedOne, setSelectedOne] = useState(true);
 
+  const dispatch = useDispatch();
+
+
   const PlanSelection = [
-    //Agar yearly hoga toh total ko 10 se multiply kar dena
     {
       id: "0",
       Plan: "Arcade",
-      Monthprice: "9",
-      Yearprice: "90",
+      Monthprice: 9,
+      Yearprice: 90,
       YearorMonth: year,
-      total: 9,
     },
     {
       id: "1",
       Plan: "Advanced",
-      Monthprice: "12",
-      Yearprice: "120",
+      Monthprice: 12,
+      Yearprice: 120,
       YearorMonth: year,
-      total: 12,
     },
     {
       id:"2",
       Plan: "Pro",
-      Monthprice: "15",
-      Yearprice: "150",
+      Monthprice: 15,
+      Yearprice: 1150,
       YearorMonth: year,
-      total: 15,
     },
   ];
 
@@ -47,6 +55,7 @@ function Step2() {
   };
 
   const handleSubmit = () => {
+    dispatch(UserPlan(PlanSelection[selected]));
 
     navigate("/add-ons");
   };

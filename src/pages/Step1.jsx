@@ -3,9 +3,17 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar/Sidebar";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { UserDetails } from "../Slices/Step1Slice";
 
 function Step1() {
   const navigate = useNavigate();
+
+  // window.addEventListener('popstate', function(event) {
+  //   navigate("/");
+  // });
+
+
   const [active, setActive] = useState(1);
   const {
     register,
@@ -13,8 +21,10 @@ function Step1() {
     formState: { errors },
   } = useForm();
 
+  const dispatch = useDispatch();
+
   const onSubmit = (data) => {
-    // alert("Form submitted");
+    dispatch(UserDetails(data));
 
     navigate("/select-plan");
   };

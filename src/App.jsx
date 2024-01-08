@@ -5,6 +5,7 @@ import Step2 from "./pages/Step2";
 import Step3 from "./pages/Step3";
 import Step4 from "./pages/Step4";
 import Step5 from "./pages/Step5";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path="/add-ons" element={<Step3 />} />
           <Route path="/summary" element={<Step4 />} />
           <Route path="/thank-you" element={<Step5 />} />
-          {/* <Route path="*" element={<NotFoundPage />} /> */}
+          <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );
