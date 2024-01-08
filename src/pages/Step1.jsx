@@ -30,7 +30,7 @@ function Step1() {
   };
 
   return (
-    <div className="w-full h-[100vh]  bg-MagnoliaNeutral flex flex-col md:justify-center items-center relative md:static">
+    <main role="main" className="w-full h-[100vh]  bg-MagnoliaNeutral flex flex-col md:justify-center items-center relative md:static">
       <Sidebar display={"Mobile"} active={active} />
 
       {/* <div className="flex flex-row gap-5 bg-white rounded-xl w-[90%] md:w-[80%] xl:w-[60%] h-[65vh] md:h-[85vh] pt-5 px-4 absolute md:static top-[100px] "> */}
@@ -166,7 +166,7 @@ function Step1() {
           Next Step
         </button>
       </div>
-    </div>
+    </main>
   );
 }
 

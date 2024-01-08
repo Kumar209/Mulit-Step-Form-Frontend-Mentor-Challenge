@@ -53,7 +53,7 @@ const Step4 = () => {
   };
 
   return (
-    <div className="w-full h-[100vh]  bg-MagnoliaNeutral overflow-x-hidden flex flex-col md:justify-center items-center relative md:static">
+    <main role="main" className="w-full h-[100vh]  bg-MagnoliaNeutral overflow-x-hidden flex flex-col md:justify-center items-center relative md:static">
       <Sidebar display={"Mobile"} active={active} />
 
       <div className="flex flex-row bg-white  rounded-xl w-[90%] md:w-[85%] xl:w-[65%] pt-[17.5px] px-4 pb-7 absolute md:static top-[100px] ">
@@ -160,7 +160,7 @@ const Step4 = () => {
           Confirm
         </button>
       </div>
-    </div>
+    </main>
   );
 };
 
