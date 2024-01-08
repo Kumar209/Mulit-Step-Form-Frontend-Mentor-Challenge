@@ -13,7 +13,7 @@ function Step2() {
   const navigate = useNavigate();
 
   window.addEventListener('popstate', function(event) {
-    navigate("/");
+    navigate("/Multi-Step-Form-Frontend-Mentor-Challenge");
   });
 
   
