@@ -70,6 +70,7 @@ function Step1() {
               <input
                 className="w-[90%] md:w-[88%] h-[40px] md:h-[50px] font-semibold rounded-md mb-3 mt-1 border-[1.5px] border-LightGray focus:outline-none focus:ring-2 focus:ring-PurplishBlue focus:border-transparent pl-3 font-Ubuntu text-[13px] md:text-[15px] text-MarineBlue"
                 type="text"
+                id="name"
                 placeholder="e.g. Stephen King"
                 {...register("name", {
                   required: "This field is required",
@@ -99,6 +100,7 @@ function Step1() {
               <input
                 className="w-[90%] md:w-[88%] h-[40px] md:h-[50px] font-semibold rounded-md mb-3 mt-1 border-[1.5px] border-LightGray focus:outline-none focus:ring-2 focus:ring-PurplishBlue focus:border-transparent pl-3 font-Ubuntu text-[13px] md:text-[15px] text-MarineBlue"
                 type="email"
+                id="email"
                 placeholder="e.g. stephenking@lorem.com"
                 {...register("email", {
                   required: "This field is required",
@@ -127,6 +129,7 @@ function Step1() {
               <input
                 className="w-[90%] md:w-[88%] h-[40px] md:h-[50px] font-semibold rounded-md mb-3 mt-1 border-[1.5px] border-LightGray focus:outline-none focus:ring-2 focus:ring-PurplishBlue focus:border-transparent pl-3 font-Ubuntu text-[13px] md:text-[15px] text-MarineBlue"
                 type="text"
+                id="phone"
                 placeholder="e.g +1 234 567 890"
                 {...register("phone", {
                   required: "This field is required",
