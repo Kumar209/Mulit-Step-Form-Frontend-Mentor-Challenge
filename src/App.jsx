@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Step1 />} />
+        <Route path="/home" element={<Step1 />} />
         <Route path="/select-plan" element={<Step2 />} />
           <Route path="/add-ons" element={<Step3 />} />
           <Route path="/summary" element={<Step4 />} />
